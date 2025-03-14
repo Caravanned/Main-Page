@@ -8,21 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="MainStyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="MenuStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header class="header-nobootstrap">
         <div class="header-container">
             <div class="logo">
-                <img src="logo.png" alt="logo">
+                <img src="logo.png" alt="Kaskada Cafe">
             </div>
-            <nav class="navbar">
+            <nav class="navbar-nobootstrap">
                 <ul class="nav-list">
-                    <li class="hide-on-mobile"><a href="#">Home</a></li>
+                    <li class="hide-on-mobile"><a href="MainPage.html">Home</a></li>
                     <li class="hide-on-mobile"><a href="#">About</a></li>
-                    <li class="hide-on-mobile"><a href="#">Products</a></li>
-                    <li class="hide-on-mobile"><a href="#">Testimonials</a></li>
+                    <li class="hide-on-mobile"><a href="MenuPage.html">Products</a></li>
+                    <li class="hide-on-desktop" onclick = showMenu()><i class="bi bi-list"></i></li>
+                    <li class="hide-on-mobile"><a href="reviews.html">Review</a></li>
                     <li class="hide-on-mobile"><a href="#">Contact</a></li>
-                    <li onclick = showMenu()><i class="bi bi-list"></i></li>
                 </ul>
             </nav>
             <div class="cart">
@@ -33,11 +35,10 @@
             <div class="hidden-nav">
                 <nav class="hidden-nav">
                     <ul class="hidden-nav-list">
-                        <li onclick= hideMenu()><i class="bi bi-x-circle-fill"></i></li>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="MainPage.html">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="MenuPage.html">Products</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
@@ -57,52 +58,22 @@
             <span class="pre-btn"><i class="bi bi-chevron-left"></i></span>
             <span class="nxt-btn"><i class="bi bi-chevron-right"></i></span>
             <div class="product-container">
-                <div class="product-card">
-                    <img src="product1.jpg" alt="product1">
+                <div class="product-card" onclick="openModal('coffee3')">
+                    <img src="/api/placeholder/150/150" alt="Spanish Hazelnut Latte">
                     <div class="product-info">
-                        <h3>Product 1</h3>
-                        <p>php100</p>
-                        <a href="#" class="add-to-cart"><i href="#" class="bi bi-cart4"></i></a>
+                        <h3>Spanish Hazelnut Latte</h3>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="product2.jpg" alt="product2">
+                <div class="product-card" onclick="openModal('coffee10')">
+                    <img src="/api/placeholder/150/150" alt="Spanish Latte">
                     <div class="product-info">
-                        <h3>Product 2</h3>
-                        <p>php100</p>
-                        <a href="#" class="add-to-cart"><i href="#" class="bi bi-cart4"></i></a>
+                        <h3>Spanish Latte</h3>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="product3.jpg" alt="product3">
+                <div class="product-card" onclick="openModal('coffee11')">
+                    <img src="/api/placeholder/150/150" alt="Salted Toffee Nut Latte">
                     <div class="product-info">
-                        <h3>Product 3</h3>
-                        <p>php100</p>
-                        <a href="#" class="add-to-cart"><i href="#" class="bi bi-cart4"></i></a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="product3.jpg" alt="product3">
-                    <div class="product-info">
-                        <h3>Product 3</h3>
-                        <p>php100</p>
-                        <a href="#" class="add-to-cart"><i href="#" class="bi bi-cart4"></i></a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="product3.jpg" alt="product3">
-                    <div class="product-info">
-                        <h3>Product 3</h3>
-                        <p>php100</p>
-                        <a href="#" class="add-to-cart"><i href="#" class="bi bi-cart4"></i></a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="product3.jpg" alt="product3">
-                    <div class="product-info">
-                        <h3>Product 3</h3>
-                        <p>php100</p>
-                        <a href="#" class="add-to-cart"><i href="#" class="bi bi-cart4"></i></a>
+                        <h3>Salted Toffee Nut Latte</h3>
                     </div>
                 </div>
             </div>
@@ -122,6 +93,10 @@
         <div class="map-location container">
             <span class="map-location-title"><h3>find us here</h3></span>
             <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.0651830868214!2d120.4022195!3d16.673621299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339193b83be8bc59%3A0x848cb8b3b4657484!2sKaskada%20Cafe!5e0!3m2!1sen!2sph!4v1741875338613!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="see-more-products container" href="#">
+            <span class="see-more-products-title"><h2>See More Products</h2></span>
         </div>
 
         <footer class="footer">
@@ -170,8 +145,42 @@
         </div>
     </footer>
     </main>
-
-    
+    <!-- Menu Modal Window -->
+    <div id="menuModal" class="menu-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="menu-modal-body">
+                <div class="menu-item-image">
+                    <img id="modalImage" src="/api/placeholder/400/400" alt="Menu Item">
+                </div>
+                <div class="menu-item-details">
+                    <h2 id="modalTitle" class="menu-item-title"></h2>
+                    <div class="menu-item-price">
+                        <p></p>
+                        <div class="price-options">
+                            <div class="price-option selected" onclick="selectSize('hot')">
+                                <div class="option-name"></div>
+                                <div class="option-price" id="hotPrice"></div>
+                                <div class="option-size" id="hotSize"></div>
+                            </div>
+                            <div class="price-option" onclick="selectSize('cold')">
+                                <div class="option-name"></div>
+                                <div class="option-price" id="coldPrice"></div>
+                                <div class="option-size" id="coldSize"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="modalDescription" class="menu-item-description">
+                        Description will be loaded here.
+                    </div>
+                    <div class="modal-buttons">
+                        <button class="btn btn-dark btn-lg w-75" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="MenuScript.js"></script>
     <script src="MainScript.js"></script>
 </body>
 </html>
