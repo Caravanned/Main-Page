@@ -10,7 +10,6 @@ body{
     margin: 0;  
     padding: 0;
     min-height: 100vh;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
@@ -18,7 +17,7 @@ body{
 }
 
 .header-nobootstrap{
-    background-color: #333;
+    background-color: #ba731b;
     color: #fff;
     text-align: center;
     width: 100%;
@@ -159,7 +158,7 @@ body{
 }
 
 .hidden-nav-list li:hover{
-    background-color: #f4f4f4;
+    background-color: #E5D0AC;
     cursor: pointer;
     width: 100%;
 }
@@ -171,6 +170,8 @@ body{
 .hidden-nav-list a{
     text-decoration: none;
     color: #ffffff;
+    text-shadow: #000 0px 0px 30px;
+    font-size: 16px;
     min-width: 1500px;
 }
 
@@ -214,7 +215,7 @@ body{
 }
 /* Scroll effect */
 .header-nobootstrap.scrolled {
-    background-color: rgb(220, 220, 220);
+    background-color: #FF9D23;
     height: 3.5rem; 
     opacity: 0.7; 
     transition: background-color 0.25s ease, height 0.25s ease, opacity 0.25s ease;
@@ -223,6 +224,7 @@ body{
 .header-nobootstrap.scrolled .header-container {  
     justify-content: center; 
     width: 100%; 
+    margin-top: -10px; 
     margin-right: 1000px; 
     transition: justify-content 0.25s ease, width 0.25s ease, margin-right 0.25s ease;
 }
@@ -545,6 +547,7 @@ body{
 
 
 .about-us p{
+    padding-top: 20px;
     line-height: 2rem;
     font-size: 1rem;
     color: #333;
@@ -560,12 +563,31 @@ body{
     align-items: center;
     max-height: 300px;
     min-height: 200px;
-    background-image: url(background.jpg); /* Add image here */
+    width: 100%;
+    background-image: url(ASSETS/img11.jpg); /* Add image here */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     transition: background-image 0.5s ease;
+    z-index: 10;
+    margin-top: -20px;
 }
+
+.about-us-images a{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;   
+    flex-grow: 1; 
+}
+.about-us-images:hover{
+    cursor: pointer;
+    opacity: 80%;
+    background-color: #000;
+    transition: opacity 0.3s ease;
+}
+
 
 .learn-more-button {
     background-color: rgb(55, 60, 60);
@@ -626,12 +648,13 @@ body{
 }
 
 
+
 .map-location h3{
     text-align: center;
     font-size: 2rem;
     color: #333;
     margin-bottom: 20px;
-    font-weight: 500;
+    font-weight: 8000;
     text-transform: capitalize;
     position: relative;
     width: 100%;
@@ -653,7 +676,7 @@ body{
     align-items: center;
     max-height: 300px;
     min-height: 200px;
-    background-image: url(background.jpg); /* Add image here */
+    background-image: url(ASSETS/img2.jpg); /* Add image here */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -661,6 +684,14 @@ body{
     position: relative;
     margin: 0 20px 0 20px;
 }
+
+.see-more-products:hover{
+    cursor: pointer;
+    opacity: 80%;
+    background-color: #000;
+    transition: opacity 0.3s ease;
+}
+
 
 .see-more-products::before {
     content: '';
@@ -673,11 +704,14 @@ body{
     box-shadow: -10px 0px 15px -10px rgba(0, 0, 0, 0.2), /* Left Shadow */
                 10px 0px 15px -10px rgba(0, 0, 0, 0.2); /* Right Shadow */
 }
+.see-more-products a{
+    text-decoration: none;
+}
 
 .see-more-products h2{
     text-align: center;
     font-size: 2rem;
-    color: #333;
+    color: #fcfcfc;
     margin-bottom: 20px;
     font-weight: 500;
     text-transform: capitalize;
@@ -741,7 +775,7 @@ body{
 /* Footer */
 .footer {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
     padding: 40px 20px;
     border-top: 1px solid #f0f0f0;
 }

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews |  Kaskada Cafe</title>
-    <link rel="stylesheet" href="reviews.css">
-    <link rel="stylesheet" href="MainStyle.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="MainStyle.css">
+    <title>Contact Us | Kaskada Cafe</title>
+	<link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="MenuStyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="MainStyle.css">
 </head>
 <body>
   <header class="header-nobootstrap">
@@ -56,44 +56,34 @@
   </div>
 </div>
     <div class="container">
-        <h1>Our Coffee Shop Reviews</h1>
+	<div class="logo-container">
+    <img src="ASSETS/logocontact.jpg" alt="Kaskada Cafe Logo">
+	</div>
+        <h2>Contact Us</h2>
+		<p>We welcome all questions, comments and feedback - It helps us make your<br>experience at Kaskada Cafe the best it can be. We’ll respond as quickly as possible.
+        <div class="contact-info">
+            <p>📍 Laoeng St, Poblacion, San Gabriel, 2513 La Union</p>
+            <p>📞 Phone: (+63) 543-1589</p>
+			<p>Monday to Sunday, 9AM - 7PM<br>Thursday, Closed</p>
+            <p>📧 Email: kaskadacafesg@gmail.com</p>
+        </div>
 
-        <!-- Review Form -->
-        <div class="review-form">
-            <h2>Leave a Review</h2>
-            <form id="reviewForm">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <div class="star-rating">
-                    <span class="star" data-value="1">&#9733;</span>
-                    <span class="star" data-value="2">&#9733;</span>
-                    <span class="star" data-value="3">&#9733;</span>
-                    <span class="star" data-value="4">&#9733;</span>
-                    <span class="star" data-value="5">&#9733;</span>
-                </div>
-                <input type="hidden" id="rating" name="rating" value="0" required>
-                <textarea id="review" rows="5" placeholder="Your Review" required></textarea>
-                <label for="photo" style="margin-top: 20px; display: block;">Upload a Photo (Optional):</label>
-                <!-- Custom file input -->
-                <div class="custom-file-input">
-                    <input type="file" id="photo" accept="image/*">
-                    <span class="file-button">Choose File</span>
-                    <span class="file-name">No file chosen</span>
-                </div>
-                <button type="submit">Submit Review</button>
-            </form>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+			<input type="subject" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="map-location">
+            <div class="map-location-title"><span><h4>Find Us Here</h4></span></div>
+            <div class="google-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.0651830868214!2d120.4022195!3d16.673621299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339193b83be8bc59%3A0x848cb8b3b4657484!2sKaskada%20Cafe!5e0!3m2!1sen!2sph!4v1741882170389!5m2!1sen!2sph" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+			></iframe></div>
         </div>
     </div>
 
-    <!-- Separate Container for Customer Reviews -->
-    <div class="reviews-container">
-        <div class="container">
-            <h2>Customer Reviews</h2>
-            <div class="reviews-grid" id="reviewsContainer">
-                <!-- Reviews will be added here -->
-            </div>
-        </div>
-    </div>
-
+    <!-- Footer Section -->
     <footer class="footer">
       <div class="footer-content">
           <div class="footer-logo-section">
@@ -140,8 +130,8 @@
       </div>
   </footer>
 
-    <script src="MainScript.js"></script>
-    <script src="reviews_script.js"></script>
-    <script src="MenuScript.js"></script>
+	<script src="contact.js"></script>
+  <script src="MenuScript.js"></script>
+  <script src="MainScript.js"></script>
 </body>
 </html>
