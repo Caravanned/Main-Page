@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Kaskada Cafe</title>
+    <link rel="stylesheet" href="MainStyle.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="MenuStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="checkoutStyle.css">
+</head>
+<body>
+    <header class="header-nobootstrap">
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Kaskada Cafe">
+            </div>
+            <nav class="navbar-nobootstrap">
+                <ul class="nav-list">
+                    <li class="hide-on-mobile"><a href="MainPage.html">Home</a></li>
+                    <li class="hide-on-mobile"><a href="about.html">About</a></li>
+                    <li class="hide-on-mobile"><a href="MenuPage.html">Products</a></li>
+                    <li class="hide-on-desktop" onclick = showMenu()><i class="bi bi-list"></i></li>
+                    <li class="hide-on-mobile"><a href="reviews.html">Review</a></li>
+                    <li class="hide-on-mobile"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart" onclick="toggleCartSidebar()">  <i class="bi bi-cart"></i>
+                <div class="cart-indicator">0</div>
+            </div>
+        </div>
+            <div class="hidden-nav">
+                <nav class="hidden-nav">
+                    <ul class="hidden-nav-list">
+                        <li><a href="MainPage.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="MenuPage.html">Products</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+
+    <main>
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <h2>Your Order</h2>
+        </div>
+        <div class="checkout-items">
+            </div>
+        <div class="checkout-total">
+            Total: <span id="checkout-total-amount"></span>
+        </div>
+         <div class="checkout-buttons">
+                <button class="btn btn-success" onclick="completePurchase()">Complete Purchase</button>
+                <a href="MainPage.html" class="btn btn-secondary">Cancel</a>
+            </div>
+    </div>
+</main>
+    <script src="checkoutScript.js"></script>
+    <script src="MainScript.js"></script>
+    <script src="MenuScript.js"></script>
+</body>
+</html>
