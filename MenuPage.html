@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaskada Cafe</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="MenuStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="MainStyle.css">
+    <script src="MainScript.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header class="header-nobootstrap">
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Kaskada Cafe">
+            </div>
+            <nav class="navbar-nobootstrap">
+                <ul class="nav-list">
+                    <li class="hide-on-mobile"><a href="MainPage.html">Home</a></li>
+                    <li class="hide-on-mobile"><a href="#">About</a></li>
+                    <li class="hide-on-mobile"><a href="MenuPage.html">Products</a></li>
+                    <li class="hide-on-desktop" onclick = showMenu()><i class="bi bi-list"></i></li>
+                    <li class="hide-on-mobile"><a href="reviews.html">Review</a></li>
+                    <li class="hide-on-mobile"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <i class="bi bi-cart"></i>
+                <div class="cart-indicator">0</div>
+            </div>
+        </div>
+            <div class="hidden-nav">
+                <nav class="hidden-nav">
+                    <ul class="hidden-nav-list">
+                        <li><a href="MainPage.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="MenuPage.html">Products</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container mt-5 pt-5">
+        <h1 class="text-center">Kaskada Cafe Menu</h1>
+        <div class="row">
+            <div class="col-lg-3">
+                <!-- Sidebar -->
+                <div class="list-group sticky-top">
+                    <a href="#featured" class="list-group-item list-group-item-action">Featured Favorites</a>
+                    <a href="#coffee" class="list-group-item list-group-item-action">Coffee</a>
+                    <a href="#non-coffee" class="list-group-item list-group-item-action">Non-Coffee</a>
+                    <a href="#soda" class="list-group-item list-group-item-action">Soda Drinks</a>
+                    <a href="#pizza" class="list-group-item list-group-item-action">Pizza</a>
+                    <a href="#pastries" class="list-group-item list-group-item-action">Pastries</a>
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                <!-- Menu Sections -->
+                <div id="featured" class="mb-4">
+                    <h2 class="section-title">Featured Favorites</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card" onclick="openModal('coffee3')">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Spanish Hazelnut Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">Spanish Hazelnut Latte</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee3')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Spanish Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">Spanish Latte</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee10')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Salted Toffee Nut Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">Salted Toffee Nut Latte</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee11')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Coffee Section -->
+                <div id="coffee" class="mb-4">
+                    <h2 class="section-title">Coffee</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Americano">
+                                <div class="card-body">
+                                    <h5 class="card-title">Americano</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee0')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Cafe Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cafe Latte</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee1')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Salted Caramel Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">Salted Caramel Latte</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee2')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Spanish Hazelnut Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">Spanish Hazelnut Latte</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee3')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="White Mocha Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">White Mocha Latte</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee4')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Caramel Macchiato">
+                                <div class="card-body">
+                                    <h5 class="card-title">Caramel Macchiato</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee5')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Biscoffee">
+                                <div class="card-body">
+                                    <h5 class="card-title">Biscoffee</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee6')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Brown Sugar Cinnamon">
+                                <div class="card-body">
+                                    <h5 class="card-title">Brown Sugar Cinnamon</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee7')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Caramel Brulee">
+                                <div class="card-body">
+                                    <h5 class="card-title">Caramel Brulee</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee8')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Choco Chip Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">Choco Chip Latte</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee9')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Spanish Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">Spanish Latte</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee10')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Salted Toffee Nut Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">Salted Toffee Nut Latte</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee11')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Cafe Mocha">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cafe Mocha</h5>
+                                    <button class="btn btn-dark" onclick="openModal('coffee12')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Non-Coffee Section -->
+                <div id="non-coffee" class="mb-4">
+                    <h2 class="section-title">Non-Coffee</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Matcha Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">Matcha Latte</h5>
+                                    <button class="btn btn-dark" onclick="openModal('noncoffee0')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Strawberry Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">Strawberry Latte</h5>
+                                    <button class="btn btn-dark" onclick="openModal('noncoffee1')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Dark Choco Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dark Choco Latte</h5>
+                                    <button class="btn btn-dark" onclick="openModal('noncoffee2')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Strawberry-Matcha">
+                                <div class="card-body">
+                                    <h5 class="card-title">Strawberry-Matcha</h5>
+                                    <button class="btn btn-dark" onclick="openModal('noncoffee3')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Choco-Berry">
+                                <div class="card-body">
+                                    <h5 class="card-title">Choco-Berry</h5>
+                                    <button class="btn btn-dark" onclick="openModal('noncoffee4')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soda Drinks Section -->
+                <div id="soda" class="mb-4">
+                    <h2 class="section-title">Soda Drinks</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Rose-Berry">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rose-Berry</h5>
+                                    <button class="btn btn-dark" onclick="openModal('soda0')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Peach Citrus">
+                                <div class="card-body">
+                                    <h5 class="card-title">Peach Citrus</h5>
+                                    <button class="btn btn-dark" onclick="openModal('soda1')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Passion Bloom">
+                                <div class="card-body">
+                                    <h5 class="card-title">Passion Bloom</h5>
+                                    <button class="btn btn-dark" onclick="openModal('soda2')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Hibiscus Lemon">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hibiscus Lemon</h5>
+                                    <button class="btn btn-dark" onclick="openModal('soda3')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Lemon Ginger Tea Soda">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lemon Ginger Tea Soda</h5>
+                                    <button class="btn btn-dark" onclick="openModal('soda4')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Passion-Calamansi">
+                                <div class="card-body">
+                                    <h5 class="card-title">Passion-Calamansi</h5>
+                                    <button class="btn btn-dark" onclick="openModal('soda5')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Mixed Berry Soda">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mixed Berry Soda</h5>
+                                    <button class="btn btn-dark" onclick="openModal('soda6')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                ...
+
+                <!-- Pizza Section -->
+                <div id="pizza" class="mb-4">
+                    <h2 class="section-title">Pizza</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Ham and Cheese">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ham and Cheese</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pizza0')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Pepperoni">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pepperoni</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pizza1')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Hawaiian">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hawaiian</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pizza2')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Cheesy Bacon">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cheesy Bacon</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pizza3')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="All Cheese">
+                                <div class="card-body">
+                                    <h5 class="card-title">All Cheese</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pizza4')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Beef Aloha">
+                                <div class="card-body">
+                                    <h5 class="card-title">Beef Aloha</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pizza5')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Beefy Mushroom">
+                                <div class="card-body">
+                                    <h5 class="card-title">Beefy Mushroom</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pizza6')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Cheese Aloha">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cheese Aloha</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pizza7')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Supreme">
+                                <div class="card-body">
+                                    <h5 class="card-title">Supreme</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pizza8')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Farmhouse">
+                                <div class="card-body">
+                                    <h5 class="card-title">Farmhouse</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pizza9')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Kaskada Pizza">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kaskada Pizza</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pizza10')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Creamy Spinach">
+                                <div class="card-body">
+                                    <h5 class="card-title">Creamy Spinach</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pizza11')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pastries Section -->
+                <div id="pastries" class="mb-4">
+                    <h2 class="section-title">Pastries</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Milky Cheese Roll">
+                                <div class="card-body">
+                                    <h5 class="card-title">Milky Cheese Roll</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pastry0')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Ube Ensaymada">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ube Ensaymada</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pastry1')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Classic Ensaymada">
+                                <div class="card-body">
+                                    <h5 class="card-title">Classic Ensaymada</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pastry2')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Cinnamon Bun">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cinnamon Bun</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pastry3')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Ham and Cheese Bun">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ham and Cheese Bun</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pastry4')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Chicken Floss Bun">
+                                <div class="card-body">
+                                    <h5 class="card-title">Chicken Floss Bun</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pastry5')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="/api/placeholder/150/150" class="card-img-top" alt="Chicken Floss Roll">
+                                <div class="card-body">
+                                    <h5 class="card-title">Chicken Floss Roll</h5>
+                                    <button class="btn btn-dark" onclick="openModal('pastry6')">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu Modal Window -->
+            <div id="menuModal" class="menu-modal">
+                <div class="modal-content">
+                    <span class="close-modal" onclick="closeModal()">&times;</span>
+                    <div class="menu-modal-body">
+                        <div class="menu-item-image">
+                            <img id="modalImage" src="/api/placeholder/400/400" alt="Menu Item">
+                        </div>
+                        <div class="menu-item-details">
+                            <h2 id="modalTitle" class="menu-item-title"></h2>
+                            <div class="menu-item-price">
+                                <p></p>
+                                <div class="price-options">
+                                    <div class="price-option selected" onclick="selectSize('hot')">
+                                        <div class="option-name"></div>
+                                        <div class="option-price" id="hotPrice"></div>
+                                        <div class="option-size" id="hotSize"></div>
+                                    </div>
+                                    <div class="price-option" onclick="selectSize('cold')">
+                                        <div class="option-name"></div>
+                                        <div class="option-price" id="coldPrice"></div>
+                                        <div class="option-size" id="coldSize"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="modalDescription" class="menu-item-description">
+                                Description will be loaded here.
+                            </div>
+                            <div class="modal-buttons">
+                                <button class="btn btn-dark btn-lg w-75" onclick="addToCart()">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap and other JavaScript libraries -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Custom script file -->
+            <script src="MenuScript.js"></script>
+
+</body>
+
+</html>

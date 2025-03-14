@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            ABOUT US | KASKADA CAFE
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="coffeeshop" content="more information about Kaskada Cafe">
+        <link rel="icon" type="image/png" href="ASSETS/logo.jpg">
+        <link rel="stylesheet" href="about.css"> 
+        <script src="about.js"></script>
+    </head>
+    <body>
+        <section class="introduction">
+            <div class="introduction_components">
+                <h1>
+                    KASKADA CAFE - WHERE EVERY FLOW OF FLAVOR CASCADES GOODNESS
+                </h1>
+                <p>______________________________________</p>
+                <br>
+                <p>
+                    Kaskada Cafe is more than just a coffee shop. Here, we make sure that every
+                    sip of coffee and every bite of our pastries will give you the delight that 
+                    you have always needed. Located at the beautiful place of La Union, we cater 
+                    to everyone who are looking for a warm and cozy experience. Come and see for 
+                    yourself!
+                </p>
+            </div>
+        </section>
+        <div class="container">
+            <div class="grid">
+                <div class="grid-item" onclick="openLightbox('ASSETS/kaskada_about1.png')">
+                OUR STORY
+                </div>
+            
+                <div class="grid-item" onclick="openLightbox('ASSETS/kaskada_about2.png')">
+                OUR MISSION
+                </div>
+            
+                <div class="grid-item" onclick="openLightbox('ASSETS/kaskada_about3.png')">
+                OUR SIGNATURE EXPERIENCE
+                </div>
+            </div>
+        </div>
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-content">
+                <span class="close-btn" onclick="closeLightbox()">x</span>
+                <img id="lightbox-img" src="" alt="grid-item-image">
+            </div>
+        </div>
+        <section class="location">
+            <div class="location_text left">
+                <p>
+                    COME VISIT OUR CAFE!
+                </p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.0650815498916!2d120.39734858579283!3d16.673626381985148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339193b83be8bc59%3A0x848cb8b3b4657484!2sKaskada%20Cafe!5e0!3m2!1sen!2sph!4v1741852587628!5m2!1sen!2sph" 
+                width="600" 
+                height="450"
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="location_text right">
+                <p>
+                    LAOENG STREET, POBLACION, SAN GABRIEL, 2513 LA UNION
+                </p>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-logo-section">
+                <div class="footer-logo">
+                  <img src="ASSETS/logo.jpg" alt="Logo">
+                  <div class="footer-logo-text">Kaskada Cafe</div>
+                </div>
+                <p class="footer-tagline">Cafe · Pizza Place · Bakery</p>
+              </div>
+              
+              <div class="footer-links">
+                <div class="footer-column">
+                  <h3>Product</h3>
+                  <ul>
+                    <li><a href="#">Our Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#">Reviews</a></li>
+                  </ul>
+                </div>
+                
+                <div class="footer-column">
+                  <h3>Company</h3>
+                  <ul>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+                
+                <div class="footer-column">
+                  <h3>Social</h3>
+                  <ul>
+                    <li><a href="https://www.facebook.com/kaskadacafe">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/kaskadacafe">Instagram</a></li>
+                  </ul>
+                </div>
+                
+                <div class="footer-column">
+                  <h3>Others</h3>
+                  <ul>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Footer</title>
+  <style>
+    :root {
+      --primary-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    body {
+      font-family: var(--primary-font);
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      border-top: 1px solid #f0f0f0;
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+    
+    .footer-logo-section {
+      max-width: 280px;
+    }
+    
+    .footer-logo {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .footer-logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
+    
+    .footer-logo-text {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    
+    .footer-tagline {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #555;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 60px;
+    }
+    
+    .footer-column h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #555;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .footer-column li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-column a {
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    
+    .footer-column a:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+      }
+      
+      .footer-logo-section {
+        margin-bottom: 30px;
+      }
+      
+      .footer-links {
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo-section">
+        <div class="footer-logo">
+          <img src="logo.jpg" alt="Logo">
+          <div class="footer-logo-text">Kaskada Cafe</div>
+        </div>
+        <p class="footer-tagline">Cafe · Pizza place · Bakery</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="#">Our Products</a></li>
+            <li><a href="#">Reviews</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Social</h3>
+          <ul>
+            <li><a href="https://www.facebook.com/kaskadacafe">Facebook</a></li>
+            <li><a href="https://www.instagram.com/kaskadacafe">Instagram</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

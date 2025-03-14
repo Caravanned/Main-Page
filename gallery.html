@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>
+            GALLERY | KASKADA CAFE
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="coffeeshop" content="gallery about Kaskada Cafe">
+        <link rel="icon" type="image/png" href="ASSETS/logo.jpg">
+        <link rel="stylesheet" href="gallery.css">
+        <script src="gallery.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="profile-header">
+                <img src="ASSETS/logo.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="profile-info">
+                    <div class="profile-top">
+                        <h2 class="username">kaskadacafe</h2>
+                        <a href="https://www.instagram.com/kaskadacafe/" target="_blank" class="follow-btn">Follow</a>
+                    </div>
+                    <div class="stats">
+                        <span><strong>64</strong> posts</span>
+                        <span><strong>45</strong> followers</span>
+                        <span><strong>22</strong> following</span>
+                    </div>
+                    <p class="bio">where flavor flows</p>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="ASSETS/img1.jpg" alt="Image 1" onclick="openLightbox('ASSETS/Kaskada_IG/1.png')">
+                <img src="ASSETS/img2.jpg" alt="Image 2" onclick="openLightbox('ASSETS/Kaskada_IG/2.png')">
+                <img src="ASSETS/img3.jpg" alt="Image 3" onclick="openLightbox('ASSETS/Kaskada_IG/3.png')">
+                <img src="ASSETS/img4.jpg" alt="Image 4" onclick="openLightbox('ASSETS/Kaskada_IG/4.png')">
+                <img src="ASSETS/img5.jpg" alt="Image 5" onclick="openLightbox('ASSETS/Kaskada_IG/5.png')">
+                <img src="ASSETS/img6.jpg" alt="Image 6" onclick="openLightbox('ASSETS/Kaskada_IG/6.png')">
+                <img src="ASSETS/img7.jpg" alt="Image 7" onclick="openLightbox('ASSETS/Kaskada_IG/7.png')">
+                <img src="ASSETS/img8.jpg" alt="Image 8" onclick="openLightbox('ASSETS/Kaskada_IG/8.png')">
+                <img src="ASSETS/img9.jpg" alt="Image 9" onclick="openLightbox('ASSETS/Kaskada_IG/9.png')">
+                <img src="ASSETS/img10.jpg" alt="Image 10" onclick="openLightbox('ASSETS/Kaskada_IG/10.png')">
+                <img src="ASSETS/img11.jpg" alt="Image 11" onclick="openLightbox('ASSETS/Kaskada_IG/11.png')">
+                <img src="ASSETS/img12.jpg" alt="Image 12" onclick="openLightbox('ASSETS/Kaskada_IG/12.png')">
+                <img src="ASSETS/img13.jpg" alt="Image 13" onclick="openLightbox('ASSETS/Kaskada_IG/13.png')">
+                <img src="ASSETS/img14.jpg" alt="Image 14" onclick="openLightbox('ASSETS/Kaskada_IG/14.png')">
+                <img src="ASSETS/img15.jpg" alt="Image 15" onclick="openLightbox('ASSETS/Kaskada_IG/15.png')">
+                <img src="ASSETS/img16.jpg" alt="Image 16" onclick="openLightbox('ASSETS/Kaskada_IG/16.png')">
+                <img src="ASSETS/img17.jpg" alt="Image 17" onclick="openLightbox('ASSETS/Kaskada_IG/17.png')">
+                <img src="ASSETS/img18.jpg" alt="Image 18" onclick="openLightbox('ASSETS/Kaskada_IG/18.png')">
+                <img src="ASSETS/img19.jpg" alt="Image 19" onclick="openLightbox('ASSETS/Kaskada_IG/19.png')">
+                <img src="ASSETS/img20.jpg" alt="Image 20" onclick="openLightbox('ASSETS/Kaskada_IG/20.png')">
+                <img src="ASSETS/img21.jpg" alt="Image 21" onclick="openLightbox('ASSETS/Kaskada_IG/21.png')">
+            </div>
+            <footer class="footer">
+                <div class="footer-content">
+                  <div class="footer-logo-section">
+                    <div class="footer-logo">
+                      <img src="ASSETS/logo.jpg" alt="Logo">
+                      <div class="footer-logo-text">Kaskada Cafe</div>
+                    </div>
+                    <p class="footer-tagline">Cafe · Pizza Place · Bakery</p>
+                  </div>
+                  
+                  <div class="footer-links">
+                    <div class="footer-column">
+                      <h3>Product</h3>
+                      <ul>
+                        <li><a href="#">Our Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="#">Reviews</a></li>
+                      </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                      <h3>Company</h3>
+                      <ul>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="#">Contact</a></li>
+                      </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                      <h3>Social</h3>
+                      <ul>
+                        <li><a href="https://www.facebook.com/kaskadacafe">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/kaskadacafe">Instagram</a></li>
+                      </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                      <h3>Others</h3>
+                      <ul>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </footer>
+        </div>
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <div class="lightbox-content"> 
+                <span class="close-btn" onclick="closeLightbox()">×</span> 
+                <img id="lightbox-img" src="" alt="Lightbox Image">
+            </div>
+        </div>
+    </body>
+</html>
